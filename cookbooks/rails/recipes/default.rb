@@ -16,3 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+bash "install_rails_via_rvm_from_remote_script" do
+  code <<-EOH
+    \\curl -L https://get.rvm.io | bash -s stable --rails
+  EOH
+end

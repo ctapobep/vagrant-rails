@@ -16,6 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-execute "apt-get-update-periodic" do
+execute "apt-get-update" do
   command "apt-get update"
 end

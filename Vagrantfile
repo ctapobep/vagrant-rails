@@ -1,5 +1,6 @@
 Vagrant::Config.run do |config|
   config.vm.box = "precise32"
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
    config.vm.provision :chef_solo do |chef|
      chef.json = {
@@ -15,6 +16,8 @@ Vagrant::Config.run do |config|
      chef.roles_path = "roles"
      
      chef.add_recipe 'apt::update'
+
      chef.add_role 'ruby'
+     chef.add_recipe 'rails'
    end
 end
